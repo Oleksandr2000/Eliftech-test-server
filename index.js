@@ -21,7 +21,9 @@ app.get('/items/:itemsId', getItemsShop);
 
 app.post('/order', postOrderData);
 
-app.listen(4000, (err) => {
+const PORT = process.env.PORT || 80;
+
+app.listen(PORT, (err) => {
   if (err) {
     return console.log(err);
   }
